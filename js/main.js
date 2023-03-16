@@ -17,6 +17,7 @@ const handleNav = () => {
 };
 const handleNavItemsAnimation = () => {
 	let delayTime = 0;
+	navBtnBars.classList.remove("black-bars-color");
 	navItems.forEach((item) => {
 		item.classList.toggle("nav-items-animation");
 		item.style.animationDelay = "." + delayTime + "s";
