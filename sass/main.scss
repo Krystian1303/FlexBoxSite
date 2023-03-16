@@ -379,7 +379,48 @@ body {
 		color: s.$dark;
 	}
 }
+// CONTACT
+.contact {
+	position: relative;
+	background-color: s.$light-white;
+	overflow: hidden;
 
+	.white-block-left {
+		background-color: s.$dark;
+	}
+	&__form,
+	&__form-top {
+		display: flex;
+		flex-direction: column;
+	}
+	&__form-label {
+		margin-bottom: 0.5em;
+		text-transform: uppercase;
+	}
+	&__form-input {
+		@include s.contactForm;
+	}
+	&__form-textarea {
+		@include s.contactForm;
+		max-width: 100%;
+		width: 100%;
+		min-height: 150px;
+	}
+	&__form-btn {
+		align-self: flex-end;
+		padding: 1em;
+		width: 100%;
+		max-width: 300px;
+		color: s.$pure-white;
+		border: none;
+		border-radius: 8px;
+		background-color: s.$main-color;
+		cursor: pointer;
+		&::before {
+			background-color: s.$secondary-color;
+		}
+	}
+}
 // ===============
 // MEDIA
 // ===============
