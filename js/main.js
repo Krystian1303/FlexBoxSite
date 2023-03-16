@@ -8,16 +8,17 @@ const footerYear = document.querySelector(".footer__year");
 
 const handleNav = () => {
 	nav.classList.toggle("nav--active");
+	navBtnBars.classList.remove("black-bars-color");
 	navItems.forEach((item) => {
 		item.addEventListener("click", () => {
 			nav.classList.remove("nav--active");
 		});
 	});
+
 	handleNavItemsAnimation();
 };
 const handleNavItemsAnimation = () => {
 	let delayTime = 0;
-	navBtnBars.classList.remove("black-bars-color");
 	navItems.forEach((item) => {
 		item.classList.toggle("nav-items-animation");
 		item.style.animationDelay = "." + delayTime + "s";
@@ -37,6 +38,9 @@ const handleObserver = () => {
 			!section.classList.contains("white-section") &&
 			section.offsetTop <= currentSection + 60
 		) {
+			navBtnBars.classList.remove("black-bars-color");
+		}
+		if (nav.classList.contains("nav--active")) {
 			navBtnBars.classList.remove("black-bars-color");
 		}
 	});
