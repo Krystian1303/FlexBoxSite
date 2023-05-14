@@ -52,7 +52,7 @@
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
-  color: #1755e7;
+  color: #ff8000;
   letter-spacing: 2px;
 }
 
@@ -148,7 +148,7 @@ body {
   height: 100vh;
   width: 100%;
   transform: translateX(100%);
-  background-image: linear-gradient(45deg, rgb(20, 105, 241), rgb(42, 10, 184));
+  background-image: linear-gradient(45deg, rgb(250, 112, 154), rgb(254, 225, 64));
   z-index: 100;
   transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
@@ -179,15 +179,6 @@ body {
   transform: scaleY(1);
 }
 
-@-webkit-keyframes navItemsAnimation {
-  from {
-    transform: translateX(200%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
 @keyframes navItemsAnimation {
   from {
     transform: translateX(200%);
@@ -197,8 +188,7 @@ body {
   }
 }
 .nav-items-animation {
-  -webkit-animation: navItemsAnimation 1s both;
-          animation: navItemsAnimation 1s both;
+  animation: navItemsAnimation 1s both;
 }
 
 .black-bars-color,
@@ -217,7 +207,7 @@ body {
   height: 75vh;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/header_small.jpg");
+  background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url("../img/header_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -256,6 +246,7 @@ body {
 .dreams__img {
   width: 100%;
   margin-bottom: 1em;
+  border-radius: 40%;
 }
 .dreams__title {
   margin-bottom: 0.5em;
@@ -267,7 +258,7 @@ body {
 .hero-img {
   position: relative;
   padding: 10em 2em;
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/tahiti_small.jpeg");
+  background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url("../img/hero_small.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -284,7 +275,13 @@ body {
   padding: 1em 0;
 }
 
-.islands__card {
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.pizza__card {
   position: relative;
   margin: 1em 0;
   height: 450px;
@@ -292,44 +289,44 @@ body {
   text-align: center;
   perspective: 1000px;
 }
-.islands__card:hover .islands__card-img {
+.pizza__card:hover .pizza__card-img {
   transform: rotateY(-180deg);
   opacity: 0;
 }
-.islands__card:hover .islands__card-info {
+.pizza__card:hover .pizza__card-info {
   transform: rotateY(0);
   opacity: 1;
 }
-.islands__card-img {
+.pizza__card-img {
   padding: 2em;
   height: 100%;
   border-radius: 8px;
   background-size: cover;
   transition: transform 1s, opacity 1s;
 }
-.islands__card-img--first {
-  background-image: linear-gradient(45deg, rgba(8, 206, 255, 0.75), rgba(8, 24, 255, 0.75)), url(../img/wybrzeze.jpeg);
+.pizza__card-img--first {
+  background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url(../img/marg_small.jpg);
 }
-.islands__card-img--second {
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/palma.jpeg);
+.pizza__card-img--second {
+  background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url(../img/capri.jpg);
 }
-.islands__card-img--third {
-  background-image: linear-gradient(45deg, rgba(190, 10, 214, 0.75), rgba(68, 0, 255, 0.75)), url(../img/staw.jpeg);
+.pizza__card-img--third {
+  background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url(../img/diavola_small.jpg);
 }
-.islands__card-img-title {
+.pizza__card-img-title {
   font-family: "Dancing Script", cursive;
   font-size: 2.8rem;
 }
-.islands__card-img-info {
+.pizza__card-img-info {
   position: absolute;
   bottom: 30px;
   right: 30px;
   font-size: 1.8rem;
 }
-.islands__card-img-info i {
+.pizza__card-img-info i {
   margin-right: 0.3em;
 }
-.islands__card-info {
+.pizza__card-info {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -338,13 +335,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: radial-gradient(circle at top right, rgb(0, 78, 255) 0%, rgb(0, 212, 255) 100%);
+  background-image: radial-gradient(circle at top right, rgb(250, 112, 154), rgb(254, 225, 64));
   border-radius: 8px;
   opacity: 0;
   transform: rotateY(180deg);
   transition: transform 1s, opacity 1s;
 }
-.islands__card-info-title {
+.pizza__card-info-title {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -352,20 +349,20 @@ body {
   font-family: "Dancing Script", cursive;
   font-size: 2.8rem;
 }
-.islands__card-info-list {
+.pizza__card-info-list {
   margin: 0 auto;
   width: 70%;
   list-style: none;
 }
-.islands__card-info-list-item {
+.pizza__card-info-list-item {
   padding: 1em;
   font-style: 1.4rem;
   border-bottom: 1px solid #eee;
 }
-.islands__card-info-list-item:last-child {
+.pizza__card-info-list-item:last-child {
   border-bottom: none;
 }
-.islands__card-info-btn {
+.pizza__card-info-btn {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -376,14 +373,14 @@ body {
   border: none;
   background-color: #00ffaa;
 }
-.islands__card-info-btn::before {
+.pizza__card-info-btn::before {
   background-color: #0fe29c;
 }
 
 .offers {
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/palma_hero_small.jpeg");
+  background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url("../img/rodzina_small.jpgg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -424,13 +421,13 @@ body {
   padding: 0.8em;
   width: 100%;
   color: #fff;
-  background-color: #1755e7;
+  background-color: #ff8000;
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
 .offers__option-btn::before {
-  background-color: #164dcc;
+  background-color: #eba543;
 }
 
 .reviews__box {
@@ -460,7 +457,7 @@ body {
 .reviews__box-quote {
   margin-bottom: 1em;
   font-size: 3rem;
-  color: #1755e7;
+  color: #ff8000;
 }
 .reviews__box-text {
   margin-bottom: 1em;
@@ -509,11 +506,11 @@ body {
   color: #fff;
   border: none;
   border-radius: 8px;
-  background-color: #1755e7;
+  background-color: #ff8000;
   cursor: pointer;
 }
 .contact__form-btn::before {
-  background-color: #164dcc;
+  background-color: #eba543;
 }
 
 .footer {
@@ -633,12 +630,12 @@ body {
   .hero-img__text {
     font-size: 2.2rem;
   }
-  .islands__cards {
+  .pizza__cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .islands__card {
+  .pizza__card {
     margin: 1em;
     width: 45%;
   }
@@ -676,7 +673,7 @@ body {
     right: 50px;
   }
   .header {
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/header_big.jpg);
+    background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url(../img/header_big.jpg);
   }
   .header__heading {
     font-size: 10rem;
@@ -701,7 +698,7 @@ body {
   }
   .hero-img {
     padding: 40rem 2em;
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url("../img/tahiti_big.jpeg");
+    background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url("../img/hero_big.jpg");
   }
   .hero-img__title {
     font-size: 8.2rem;
@@ -711,7 +708,7 @@ body {
     max-width: 900px;
   }
   .offers {
-    background-image: linear-gradient(45deg, rgba(20, 105, 241, 0.75), rgba(42, 10, 184, 0.75)), url(../img/palma_hero_big.jpeg);
+    background-image: linear-gradient(45deg, rgba(246, 211, 101, 0.6), rgba(253, 160, 133, 0.6)), url(../img/hero_big.jpg);
   }
   .offers__option-img {
     -o-object-fit: cover;
@@ -723,7 +720,7 @@ body {
   }
 }
 @media (min-width: 1100px) {
-  .islands__card {
+  .pizza__card {
     width: 30%;
   }
 }/*# sourceMappingURL=main.css.map */

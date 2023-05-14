@@ -172,6 +172,7 @@ body {
 	&__img {
 		width: 100%;
 		margin-bottom: 1em;
+		border-radius: 40%;
 	}
 	&__title {
 		margin-bottom: 0.5em;
@@ -184,7 +185,7 @@ body {
 .hero-img {
 	position: relative;
 	padding: 10em 2em;
-	@include s.heroImages("../img/tahiti_small.jpeg");
+	@include s.heroImages("../img/hero_small.jpg");
 	text-align: center;
 	color: s.$pure-white;
 	overflow: hidden;
@@ -197,8 +198,12 @@ body {
 		padding: 1em 0;
 	}
 }
-// ---------Islands
-.islands {
+a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: s.$pure-white;
+}
+.pizza {
 	&__card {
 		position: relative;
 		margin: 1em 0;
@@ -207,11 +212,11 @@ body {
 		text-align: center;
 		perspective: 1000px;
 		&:hover {
-			.islands__card-img {
+			.pizza__card-img {
 				transform: rotateY(-180deg);
 				opacity: 0;
 			}
-			.islands__card-info {
+			.pizza__card-info {
 				transform: rotateY(0);
 				opacity: 1;
 			}
@@ -223,13 +228,13 @@ body {
 			background-size: cover;
 			transition: transform 1s, opacity 1s;
 			&--first {
-				background-image: s.$light-blue-gradient, url(../img/wybrzeze.jpeg);
+				background-image: s.$light-blue-gradient, url(../img/marg_small.jpg);
 			}
 			&--second {
-				background-image: s.$blue-gradient, url(../img/palma.jpeg);
+				background-image: s.$blue-gradient, url(../img/capri.jpg);
 			}
 			&--third {
-				background-image: s.$purple-gradient, url(../img/staw.jpeg);
+				background-image: s.$purple-gradient, url(../img/diavola_small.jpg);
 			}
 			&-title {
 				font-family: "Dancing Script", cursive;
@@ -299,7 +304,7 @@ body {
 .offers {
 	position: relative;
 	overflow: hidden;
-	@include s.heroImages("../img/palma_hero_small.jpeg");
+	@include s.heroImages("../img/rodzina_small.jpgg");
 
 	.section-heading {
 		color: s.$pure-white;
@@ -559,7 +564,7 @@ body {
 			font-size: 2.2rem;
 		}
 	}
-	.islands {
+	.pizza {
 		&__cards {
 			display: flex;
 			justify-content: center;
@@ -635,7 +640,7 @@ body {
 	}
 	.hero-img {
 		padding: 40rem 2em;
-		background-image: s.$blue-gradient, url("../img/tahiti_big.jpeg");
+		background-image: s.$blue-gradient, url("../img/hero_big.jpg");
 		&__title {
 			font-size: 8.2rem;
 		}
@@ -645,7 +650,7 @@ body {
 		}
 	}
 	.offers {
-		background-image: s.$blue-gradient, url(../img/palma_hero_big.jpeg);
+		background-image: s.$blue-gradient, url(../img/hero_big.jpg);
 		&__option {
 			&-img {
 				object-fit: cover;
@@ -658,7 +663,7 @@ body {
 	}
 }
 @media (min-width: 1100px) {
-	.islands {
+	.pizza {
 		&__card {
 			width: 30%;
 		}
